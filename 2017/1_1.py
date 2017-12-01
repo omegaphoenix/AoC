@@ -2,10 +2,9 @@ INPUT="3674367652242621474168763928218321697812856559411236481728359862138483975
 
 sum=0
 prev = "3"
-print len(INPUT)
-for i in xrange(0, len(INPUT)):
-    char = INPUT[i]
-    prev = INPUT[(i + len(INPUT)/2) % len(INPUT)]
+for char in INPUT:
+    print char
     if char == prev:
         sum = sum + int(char)
+    prev = char
 print sum
