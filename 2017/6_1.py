@@ -8,7 +8,7 @@ def main():
     for line in sys.stdin:
         a = list(map(int, line.strip().split()))
         print a
-        while True:
+        while not a in seen:
             seen.append(a[:])
             max_idx = a.index(max(a))
             count = max(a)
@@ -19,9 +19,6 @@ def main():
                 a[i] += 1
                 i = (i + 1) % len(a)
             ans += 1
-            for l in seen:
-                if a == l:
-                    print ans
-                    return
+        print ans
 
 main()
