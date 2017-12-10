@@ -5,7 +5,6 @@ import sys
 def main():
     ans = 0
     all_reg = dict()
-    ops = {'<', }
     input = []
     vals = []
     for line in sys.stdin:
